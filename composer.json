@@ -1,0 +1,46 @@
+{
+    "name": "hibit-dev/geodetect",
+    "type": "library",
+    "description": "Automatically detect user's geo data based on their IP address",
+    "homepage": "https://www.hibit.dev",
+    "license": "MIT",
+    "keywords": [
+        "ip",
+        "geo",
+        "country",
+        "location",
+        "detection",
+        "laravel",
+        "symfony"
+    ],
+    "authors": [
+        {
+            "name": "Tigran Mekinyan",
+            "email": "tmekinyan@mail.ru"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "geoip2/geoip2": "^2.13"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hibit\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "vendor/bin/phpstan analyse -c phpstan.neon"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
