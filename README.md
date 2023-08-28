@@ -46,7 +46,7 @@ The package utilizes MaxMind's database in the background, which is regularly up
 $country = $geoDetect->setCountriesDatabase('location_to_db_file')
                      ->getCountry('XXX.XXX.XXX.XXX');
 ```
-> The package includes [MaxMind](https://www.maxmind.com)'s database of 2023-05-12
+> The package includes [MaxMind](https://www.maxmind.com)'s database of 2023-07-18
 
 ## Documentation
 You'll find instructions and full documentation on [HiBit](https://www.hibit.dev/posts/105/geodetect-php-package-for-ip-based-country-detection). It includes detailed info on how to wire and use the module.
