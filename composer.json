@@ -39,6 +39,6 @@
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse -c phpstan.neon"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
