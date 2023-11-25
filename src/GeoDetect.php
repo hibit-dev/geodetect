@@ -5,9 +5,9 @@ namespace Hibit;
 use Hibit\Country\CountryDatabase;
 use Hibit\Country\CountryDetect;
 use Hibit\Country\CountryRecord;
-use Hibit\Exception\CountryFlagNotFoundException;
 use Hibit\Flag\Extension;
 use Hibit\Flag\Format;
+use Hibit\Flag\Mime;
 use Hibit\Flag\Path;
 
 /**
@@ -57,6 +57,6 @@ class GeoDetect
 
         $data = file_get_contents($filename);
 
-        return 'data:image/' . Extension::getByFormat($format) . ';base64,' . base64_encode($data);
+        return 'data:image/' . Mime::getByFormat($format) . ';base64,' . base64_encode($data);
     }
 }
