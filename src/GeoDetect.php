@@ -40,29 +40,19 @@ class GeoDetect
         return $countryDetect->getByIp($ip);
     }
 
-    /**
-     * @throws Exception\CountryFlagNotFoundException
-     */
     public static function getFlagByCountryRecord(CountryRecord $countryRecord, ?Format $format = Format::H20): string
     {
-        $isoCode = $countryRecord->getIsoCode();
-
-        if ($isoCode === null) {
-            throw new CountryFlagNotFoundException('The country iso code is not valid');
-        }
+        $isoCode = $countryRecord->getIsoCode() ?? 'xx';
 
         return self::getFlagByIsoCode($isoCode, $format);
     }
 
-    /**
-     * @throws Exception\CountryFlagNotFoundException
-     */
     public static function getFlagByIsoCode(string $countryIso2, ?Format $format = Format::H20): string
     {
         $filename = sprintf('%s%s.%s', Path::getFolderByFormat($format), strtolower($countryIso2), Extension::getByFormat($format));
 
         if (file_exists($filename) === false) {
-            throw new CountryFlagNotFoundException(sprintf('Country flag not found for %s', $countryIso2));
+            return 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII= '; // Blank pixel
         }
 
         $data = file_get_contents($filename);
