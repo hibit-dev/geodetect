@@ -48,6 +48,27 @@ $country = $geoDetect->setCountriesDatabase('location_to_db_file')
 ```
 > The package includes [MaxMind](https://www.maxmind.com)'s database of 2023-11-03
 
+### Printing user flag
+
+The GeoDetect package offers the capability to easily display a user's flag. Simply create an image HTML tag and insert the corresponding source for the image based on the country's ISO2 code:
+
+```php
+<img alt="Country: FR" src="{{Hibit\GeoDetect::getFlagByIsoCode('FR')}}">
+```
+
+By default, the resulting flag will have a height of 20px and a width that typically varies around 30px.
+
+Sizes can be adjusted and even replaced with an SVG image if needed. To alter the format, the getFlagByIsoCode method requires a second parameter to be provided:
+
+```php
+Hibit\GeoDetect::getFlagByIsoCode('FR', Hibit\Flag\Format::SVG) // SVG format
+Hibit\GeoDetect::getFlagByIsoCode('FR', Hibit\Flag\Format::H20) // Height: 20px Width: ~30px
+Hibit\GeoDetect::getFlagByIsoCode('FR', Hibit\Flag\Format::H24) // Height: 24px Width: ~36px
+Hibit\GeoDetect::getFlagByIsoCode('FR', Hibit\Flag\Format::W20) // Width: 20px Height: ~13px
+Hibit\GeoDetect::getFlagByIsoCode('FR', Hibit\Flag\Format::W40) // Width: 40px Height: ~26px
+```
+_Note: we used FR for illustrative purposes, but ideally, it should be obtained through the country record's getIsoCode method._
+
 ## Documentation
 You'll find instructions and full documentation on [HiBit](https://www.hibit.dev/posts/105/geodetect-php-package-for-ip-based-country-detection). It includes detailed info on how to wire and use the module.
 
