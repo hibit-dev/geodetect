@@ -67,10 +67,14 @@ Hibit\GeoDetect::getFlagByIsoCode('FR', Hibit\Flag\Format::H24) // Height: 24px 
 Hibit\GeoDetect::getFlagByIsoCode('FR', Hibit\Flag\Format::W20) // Width: 20px Height: ~13px
 Hibit\GeoDetect::getFlagByIsoCode('FR', Hibit\Flag\Format::W40) // Width: 40px Height: ~26px
 ```
-_Note: we used FR for illustrative purposes, it should be obtained through the country record's getIsoCode method._
+_Note: FR was used for illustrative purposes; obtain the country code through the getIsoCode method of the country record. Alternatively, use the 2-character ISO code of the country if it's already available from another source._
 
 ## Documentation
-You'll find instructions and full documentation on [HiBit](https://www.hibit.dev/posts/105/geodetect-php-package-for-ip-based-country-detection). It includes detailed info on how to wire and use the module.
+Instructions and full documentation are always available on [HiBit](https://www.hibit.dev).  
+Additional information about this repository can be found here:
+- [GeoDetect: PHP package for IP-based country detection](https://www.hibit.dev/posts/105/geodetect-php-package-for-ip-based-country-detection)
+- [Country detection in Laravel applications](https://www.hibit.dev/posts/115/country-detection-in-laravel-applications)
+- [Improved GeoDetect featuring flag recognition](https://www.hibit.dev/posts/133/improved-geodetect-featuring-flag-recognition)
 
 ## Security
 If you discover any security related issues, please email security@hibit.dev instead of using the issue tracker.
