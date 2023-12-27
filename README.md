@@ -71,7 +71,7 @@ _Note: FR was used for illustrative purposes; obtain the country code through th
   
 ## Implementation in Laravel
 
-To facilitate testing, we will create a new route within our Laravel application. In the routes/web.php file, a new route called get-country has been added. When this route is accessed, it will return all the available information in JSON format.  
+To facilitate testing, we will create a new route within our Laravel application. In the _routes/web.php_ file, a new route called _get-country_ has been added. When this route is accessed, it will return all the available information in JSON format.  
 
 ```php
 Route::get('/get-country', function (Illuminate\Http\Request $request) {
@@ -90,7 +90,7 @@ Route::get('/get-country', function (Illuminate\Http\Request $request) {
 
 Please note that when testing the country detection functionality locally, it may not work as expected. This is because the client IP address in the request instance is typically set to localhost (127.0.0.1). Keep this in mind while testing the country detection feature on your local development environment.  
 
-### Country name translations
+### Country names translation
 
 The package comes with configured discovery option to enable Laravel to automatically identify and publish the necessary translations. You can find the translations in the _/lang/en/geodetect.php_ file, and feel free to make any modifications to the translations as needed. If the files are not present, please manually publish them by executing the following command:  
 
