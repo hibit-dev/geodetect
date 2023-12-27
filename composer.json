@@ -21,7 +21,8 @@
     ],
     "require": {
         "php": ">=8.1",
-        "geoip2/geoip2": "^2.13"
+        "geoip2/geoip2": "^2.13",
+        "illuminate/support": "^9"
     },
     "require-dev": {
         "phpstan/phpstan": "^1.10"
@@ -38,6 +39,13 @@
     },
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse -c phpstan.neon"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hibit\\Laravel\\GeoDetectServiceProvider"
+            ]
+        }
     },
     "minimum-stability": "stable",
     "prefer-stable": true
