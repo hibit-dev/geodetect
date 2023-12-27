@@ -68,6 +68,47 @@ Hibit\GeoDetect::getFlagByIsoCode('FR', Hibit\Flag\Format::W20) // Width: 20px H
 Hibit\GeoDetect::getFlagByIsoCode('FR', Hibit\Flag\Format::W40) // Width: 40px Height: ~26px
 ```
 _Note: FR was used for illustrative purposes; obtain the country code through the getIsoCode method of the country record. Alternatively, use the 2-character ISO code of the country if it's already available from another source._
+  
+## Implementation in Laravel
+
+To facilitate testing, we will create a new route within our Laravel application. In the routes/web.php file, a new route called get-country has been added. When this route is accessed, it will return all the available information in JSON format.  
+
+```php
+Route::get('/get-country', function (Illuminate\Http\Request $request) {
+    $geoDetect = new Hibit\GeoDetect();
+
+    $country = $geoDetect->getCountry($request->getClientIp());
+
+    return response()->json([
+        'geonameId' => $country->getGeonameId(),
+        'isoCode' => $country->getIsoCode(),
+        'name' => $country->getName(),
+        'isInEuropeanUnion' => $country->isInEuropeanUnion(),
+    ]);
+});
+```
+
+Please note that when testing the country detection functionality locally, it may not work as expected. This is because the client IP address in the request instance is typically set to localhost (127.0.0.1). Keep this in mind while testing the country detection feature on your local development environment.  
+
+### Country name translations
+
+The package comes with configured discovery option to enable Laravel to automatically identify and publish the necessary translations. You can find the translations in the _/lang/en/geodetect.php_ file, and feel free to make any modifications to the translations as needed. If the files are not present, please manually publish them by executing the following command:  
+
+```bash
+php artisan vendor:publish --tag=hibit-geodetect
+```
+
+Once the translations have been published, you can use them to display the country name in any blade file using the translation directive:  
+
+```php
+@lang('geodetect.ES') //Output: Spain
+```
+
+Alternatively, the following syntax can be used outside the blades:  
+
+```php
+__('geodetect.ES') //Output: Spain
+```
 
 ## Documentation
 Instructions and full documentation are always available on [HiBit](https://www.hibit.dev).  
