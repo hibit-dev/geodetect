@@ -46,7 +46,7 @@ The package utilizes MaxMind's database in the background, which is regularly up
 $country = $geoDetect->setCountriesDatabase('location_to_db_file')
                      ->getCountry('XXX.XXX.XXX.XXX');
 ```
-> The package includes [MaxMind](https://www.maxmind.com)'s database of 2023-11-03
+> The package includes [MaxMind](https://www.maxmind.com)'s database of 2024-01-02
 
 ### Printing user flag
 
