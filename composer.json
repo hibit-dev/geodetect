@@ -4,7 +4,7 @@
     "description": "Automatically detect user's geo data based on their IP address",
     "homepage": "https://www.hibit.dev",
     "license": "MIT",
-    "version": "3.0.0",
+    "version": "2.3.0",
     "keywords": [
         "ip",
         "geo",
