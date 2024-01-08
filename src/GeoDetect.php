@@ -55,7 +55,7 @@ class GeoDetect
             return 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII= '; // Blank pixel
         }
 
-        $data = file_get_contents($filename);
+        $data = (string) file_get_contents($filename);
 
         return 'data:image/' . Mime::getByFormat($format) . ';base64,' . base64_encode($data);
     }

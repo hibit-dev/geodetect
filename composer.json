@@ -4,6 +4,7 @@
     "description": "Automatically detect user's geo data based on their IP address",
     "homepage": "https://www.hibit.dev",
     "license": "MIT",
+    "version": "3.0.0",
     "keywords": [
         "ip",
         "geo",
@@ -21,8 +22,8 @@
     ],
     "require": {
         "php": ">=8.1",
-        "geoip2/geoip2": "^2.13",
-        "illuminate/support": "^9"
+        "geoip2/geoip2": "^3.0",
+        "illuminate/support": "^8.0|^9.0|^10.0"
     },
     "require-dev": {
         "phpstan/phpstan": "^1.10"
