@@ -52,7 +52,7 @@ class GeoDetect
         $filename = sprintf('%s%s.%s', Path::getFolderByFormat($format), strtolower($countryIso2), Extension::getByFormat($format));
 
         if (file_exists($filename) === false) {
-            return 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII= '; // Blank pixel
+            return 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII='; // Blank pixel
         }
 
         $data = (string) file_get_contents($filename);

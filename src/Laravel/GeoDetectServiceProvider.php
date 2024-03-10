@@ -10,11 +10,6 @@ use Illuminate\Support\ServiceProvider;
  */
 class GeoDetectServiceProvider extends ServiceProvider
 {
-    public function register(): void
-    {
-        //
-    }
-
     // php artisan vendor:publish --tag=hibit-geodetect
     public function boot(): void
     {

@@ -1,5 +1,11 @@
 <p align="center"><img src="https://raw.githubusercontent.com/hibit-dev/geodetect/master/images/preview.png" alt="Automatically detect user's geo data based on their IP address"></p>
 
+<p align="center">
+<a href="https://github.com/hibit-dev/geodetect"><img alt="GitHub License" src="https://img.shields.io/github/license/hibit-dev/geodetect"></a>
+<a href="https://packagist.org/packages/hibit-dev/geodetect"><img alt="Packagist Version" src="https://img.shields.io/packagist/v/hibit-dev/geodetect"></a>
+<a href="https://packagist.org/packages/hibit-dev/geodetect"><img alt="Packagist Downloads" src="https://img.shields.io/packagist/dt/hibit-dev/geodetect"></a>
+</p>
+
 # GeoDetect: IP-based country detection
 GeoDetect is a framework-agnostic PHP package that allows to effortlessly extract valuable country information from IP addresses. Powered by a robust and up-to-date IP geolocation database, the package provides accurate results and ensures reliable performance. By Integrating GeoDetect into your PHP applications developers can easily implement geolocation functionality without the hassle of building and maintaining their own IP geolocation database.
 

@@ -24,11 +24,6 @@ class CountryDatabase
         $this->database = $database;
     }
 
-    public function get(): string
-    {
-        return $this->database;
-    }
-
     public function load(): Reader
     {
         return new Reader($this->database);
