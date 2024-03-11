@@ -7,7 +7,7 @@ on:
     types: [opened, synchronize, reopened]
 jobs:
   tests:
-    name: Tests
+    name: Run tests & Analysis
     runs-on: ubuntu-latest
     steps:
       # Checkout
