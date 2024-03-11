@@ -41,7 +41,7 @@
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse -c phpstan.neon",
         "test": "vendor/bin/phpunit tests",
-        "test-coverage": "vendor/bin/phpunit tests --coverage-html reports/"
+        "test-coverage": "vendor/bin/phpunit tests --coverage-html reports/ --coverage-clover=coverage.xml"
     },
     "extra": {
         "laravel": {

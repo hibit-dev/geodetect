@@ -1,0 +1,35 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      # PHP
+      - name: Setup PHP with Xdebug
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: xdebug
+      # Dependencies
+      - name: Install dependencies with composer
+        run: composer install -q --ignore-platform-reqs --no-progress --no-suggest --prefer-dist --optimize-autoloader
+      # Run PHPStan
+      - name: Run PHPStan
+        run: composer analyse
+      # Run tests
+      - name: Run tests with phpunit
+        run: export XDEBUG_MODE=coverage && composer test-coverage
+      # Run analysis
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
