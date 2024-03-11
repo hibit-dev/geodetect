@@ -1,9 +1,11 @@
 <p align="center"><img src="https://raw.githubusercontent.com/hibit-dev/geodetect/master/images/preview.png" alt="Automatically detect user's geo data based on their IP address"></p>
 
 <p align="center">
+<a href="https://github.com/hibit-dev/geodetect/actions"><img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/hibit-dev/geodetect/.github%2Fworkflows%2Fbuild.yml"></a>
 <a href="https://github.com/hibit-dev/geodetect"><img alt="GitHub License" src="https://img.shields.io/github/license/hibit-dev/geodetect"></a>
 <a href="https://packagist.org/packages/hibit-dev/geodetect"><img alt="Packagist Version" src="https://img.shields.io/packagist/v/hibit-dev/geodetect"></a>
 <a href="https://packagist.org/packages/hibit-dev/geodetect"><img alt="Packagist Downloads" src="https://img.shields.io/packagist/dt/hibit-dev/geodetect"></a>
+<a href="https://sonarcloud.io/summary/new_code?id=hibit-dev_geodetect">https://sonarcloud.io/api/project_badges/measure?project=hibit-dev_geodetect&metric=coverage</a>
 </p>
 
 # GeoDetect: IP-based country detection
