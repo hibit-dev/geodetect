@@ -5,7 +5,7 @@
 <a href="https://github.com/hibit-dev/geodetect"><img alt="GitHub License" src="https://img.shields.io/github/license/hibit-dev/geodetect"></a>
 <a href="https://packagist.org/packages/hibit-dev/geodetect"><img alt="Packagist Version" src="https://img.shields.io/packagist/v/hibit-dev/geodetect"></a>
 <a href="https://packagist.org/packages/hibit-dev/geodetect"><img alt="Packagist Downloads" src="https://img.shields.io/packagist/dt/hibit-dev/geodetect"></a>
-<a href="https://sonarcloud.io/summary/new_code?id=hibit-dev_geodetect">https://sonarcloud.io/api/project_badges/measure?project=hibit-dev_geodetect&metric=coverage</a>
+<a href="https://sonarcloud.io/summary/new_code?id=hibit-dev_geodetect"><img alt="Tests Coverage" src="https://sonarcloud.io/api/project_badges/measure?project=hibit-dev_geodetect&metric=coverage"></a>
 </p>
 
 # GeoDetect: IP-based country detection
