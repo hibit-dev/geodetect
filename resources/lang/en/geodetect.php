@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'XX' => 'Desconocido',
+    'XX' => 'Unknown',
 
     'AD' => 'Andorra',
     'AE' => 'United Arab Emirates',
