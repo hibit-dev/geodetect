@@ -119,8 +119,9 @@ __('geodetect.ES') //Output: Spain
 ```
 
 ## Documentation
-Instructions and full documentation are always available on [HiBit](https://www.hibit.dev).  
-Additional information about this repository can be found here:
+Discover a world of knowledge hosted on [HiBit website](https://www.hibit.dev). Serving as your informational hub, this resource offers clear instructions and valuable insights to explore a spectrum of articles, tutorials, stories, news, and beyond.  
+
+You'll find detailed instructions and comprehensive documentation about this repository on:
 - [GeoDetect: PHP package for IP-based country detection](https://www.hibit.dev/posts/105/geodetect-php-package-for-ip-based-country-detection)
 - [Country detection in Laravel applications](https://www.hibit.dev/posts/115/country-detection-in-laravel-applications)
 - [Improved GeoDetect featuring flag recognition](https://www.hibit.dev/posts/133/improved-geodetect-featuring-flag-recognition)
