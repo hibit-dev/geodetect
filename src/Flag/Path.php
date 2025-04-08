@@ -10,14 +10,10 @@ class Path
 {
     public static function getFolderByFormat(Format $format): string
     {
-        $folder = match ($format) {
-            Format::H20 => 'h20',
-            Format::H24 => 'h24',
-            Format::W20 => 'w20',
-            Format::W40 => 'w40',
-            Format::SVG => 'svg',
-        };
-
-        return dirname(__FILE__) . '/../../resources/flags/' . $folder . '/';
+        return sprintf(
+            '%s/../../resources/flags/%s/',
+            dirname(__FILE__),
+            Folder::getByFormat($format)->value
+        );
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+namespace Tests;
+
 use Hibit\GeoDetect;
 use Hibit\Country\CountryRecord;
 
@@ -7,12 +9,11 @@ use Hibit\Exception\InvalidDatabaseException;
 
 use PHPUnit\Framework\TestCase;
 
-final class CountryDetectTest extends TestCase
+final class GeoDetectTest extends TestCase
 {
-    public $geoDetect;
+    private const IP = '90.71.67.40';
 
-    const IP = '90.71.67.40';
-    const IP_FLAG = 'es';
+    private GeoDetect $geoDetect;
 
     public function test_invalid_database()
     {
