@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 final class FolderTest extends TestCase
 {
-    public function test_get_flag_folder()
+    public function test_get_flag_folder(): void
     {
         $this->assertSame(Folder::H20, Folder::getByFormat(Format::H20));
         $this->assertSame(Folder::H24, Folder::getByFormat(Format::H24));

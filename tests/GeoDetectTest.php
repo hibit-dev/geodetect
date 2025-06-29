@@ -15,7 +15,7 @@ final class GeoDetectTest extends TestCase
 
     private GeoDetect $geoDetect;
 
-    public function test_invalid_database()
+    public function test_invalid_database(): void
     {
         $this->expectException(InvalidDatabaseException::class);
 
@@ -26,7 +26,7 @@ final class GeoDetectTest extends TestCase
         $this->geoDetect->getCountry(self::IP);
     }
 
-    public function test_country_record()
+    public function test_country_record(): void
     {
         $this->geoDetect = new GeoDetect();
 
@@ -39,7 +39,7 @@ final class GeoDetectTest extends TestCase
         $this->assertIsBool($countryRecord->isInEuropeanUnion());
     }
 
-    public function test_get_flag_by_country_record()
+    public function test_get_flag_by_country_record(): void
     {
         $this->geoDetect = new GeoDetect();
 
@@ -53,7 +53,7 @@ final class GeoDetectTest extends TestCase
         );
     }
 
-    public function test_get_flag_with_invalid_country()
+    public function test_get_flag_with_invalid_country(): void
     {
         $flagImage = GeoDetect::getFlagByIsoCode('xx');
 
