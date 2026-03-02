@@ -2,13 +2,14 @@
 
 namespace Hibit\Country;
 
+use Hibit\Continent\ContinentRecord;
 use Hibit\Exception\InvalidDatabaseException;
 
 /**
  * Class CountryDetect
  * @package Hibit\GeoDetect
  */
-class CountryDetect
+readonly class CountryDetect
 {
     public function __construct(private CountryDatabase $database)
     {
@@ -28,6 +29,10 @@ class CountryDetect
         }
 
         return new CountryRecord(
+            new ContinentRecord(
+                $record->continent->geonameId,
+                $record->continent->code,
+            ),
             $record->country->geonameId,
             $record->country->isoCode,
             $record->country->name,

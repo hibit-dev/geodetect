@@ -31,19 +31,28 @@ Instantiate the class or use the dependency injection:
 $geoDetect = new GeoDetect();
 ```
 
+### Countries
+
 Retrieve country record providing user's IP address:
 
 ```php
 $country = $geoDetect->getCountry('XXX.XXX.XXX.XXX');
 ```
 
-Finally, use available helpers to retrieve the required country information:
+Use available helpers to retrieve the required country information:
 
 ```php
 $country->getGeonameId();
 $country->getIsoCode();
 $country->getName();
 $country->isInEuropeanUnion();
+```
+
+Also, continent related  information:
+
+```php
+$country->continent()->getGeonameId();
+$country->continent()->getIsoCode();
 ```
 
 ### Self-hosted database
@@ -88,6 +97,10 @@ Route::get('/get-country', function (Illuminate\Http\Request $request) {
     $country = $geoDetect->getCountry($request->getClientIp());
 
     return response()->json([
+        'continent' => [
+            'geonameId' => $country->continent()->getGeonameId(),
+            'isoCode' => $country->continent()->getIsoCode(),
+        ],
         'geonameId' => $country->getGeonameId(),
         'isoCode' => $country->getIsoCode(),
         'name' => $country->getName(),

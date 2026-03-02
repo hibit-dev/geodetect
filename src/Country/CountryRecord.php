@@ -1,17 +1,25 @@
 <?php namespace Hibit\Country;
 
+use Hibit\Continent\ContinentRecord;
+
 /**
  * Class CountryRecord
  * @package Hibit\GeoDetect
  */
-class CountryRecord
+readonly class CountryRecord
 {
     public function __construct(
+        private ContinentRecord $continent,
         private ?int $geonameId,
         private ?string $isoCode,
         private ?string $name,
         private bool $isInEuropeanUnion
     ) {
+    }
+
+    public function continent(): ContinentRecord
+    {
+        return $this->continent;
     }
 
     public function getGeonameId(): ?int

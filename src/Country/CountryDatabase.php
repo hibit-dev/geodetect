@@ -3,6 +3,7 @@
 namespace Hibit\Country;
 
 use GeoIp2\Database\Reader;
+use MaxMind\Db\Reader\InvalidDatabaseException;
 
 /**
  * Class CountryDatabase
@@ -24,6 +25,9 @@ class CountryDatabase
         $this->database = $database;
     }
 
+    /**
+     * @throws InvalidDatabaseException
+     */
     public function load(): Reader
     {
         return new Reader($this->database);

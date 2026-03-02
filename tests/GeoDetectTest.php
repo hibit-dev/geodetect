@@ -39,6 +39,16 @@ final class GeoDetectTest extends TestCase
         $this->assertIsBool($countryRecord->isInEuropeanUnion());
     }
 
+    public function test_continent_record(): void
+    {
+        $this->geoDetect = new GeoDetect();
+
+        $continentRecord = $this->geoDetect->getCountry(self::IP)->continent();
+
+        $this->assertIsNumeric($continentRecord->getGeonameId());
+        $this->assertIsString($continentRecord->getIsoCode());
+    }
+
     public function test_get_flag_by_country_record(): void
     {
         $this->geoDetect = new GeoDetect();
